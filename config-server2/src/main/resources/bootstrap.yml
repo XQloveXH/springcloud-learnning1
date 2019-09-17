@@ -1,0 +1,24 @@
+
+server:
+  port: 9004
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      #config-server相关配置
+      server:
+        git:
+          uri: https://github.com/XQloveXH/springboot-learning.git
+          search-paths: config-repo
+          username: XQloveXH
+          password:  520135txh
+          strict-host-key-checking: false
+        default-label: master
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+
